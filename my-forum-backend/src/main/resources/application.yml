@@ -1,0 +1,45 @@
+spring:
+  rabbitmq:
+    addresses: localhost
+    username: admin
+    password: admin
+    virtual-host: /
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+  mail:
+    protocol: smtps
+    host: smtp.163.com
+    username: xxxxxxx@163.com
+    password: GXHFZQXOSGNVXOBEJXMV
+    port: 465
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/my-site?useUnicode=true&characterEncoding=utf-8&serverTimeZone=Asia/Shanghai
+    username: root
+    password: 123456
+  security:
+    filter:
+      order: -100 # security filter 默认优先级为-100，值越小优先级越高
+    jwt:
+      key: jaywongjwtkey
+      expire: 7
+  data:
+    redis:
+      host: localhost
+      port: 6379
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+minio:
+  endpoint: http://localhost:9000
+  username: minio
+  password: password
+weather:
+  key: xxxxxx
+web:
+  flow:
+    limit: 50
+    period: 3
+    block: 30
